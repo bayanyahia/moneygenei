@@ -18,38 +18,90 @@ export default function GoalForm() {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto', backgroundColor: '#e3f2fd', borderRadius: '12px' }}>
-      <h2 style={{ textAlign: 'center' }}>הגדרת מטרת חיסכון</h2>
+    <div style={{
+      padding: '30px',
+      borderRadius: '16px',
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.6)',
+      color: 'white',
+      textAlign: 'left'
+    }}>
+      <h2 style={{
+        textAlign: 'center',
+        marginBottom: '20px',
+        color: '#e3bd67'
+      }}>
+        Set a Saving Goal
+      </h2>
 
-      <label>שם המטרה:</label>
+      <label>Goal Name:</label>
       <input
         type="text"
         value={goalName}
         onChange={(e) => setGoalName(e.target.value)}
-        placeholder="למשל: טיול לפריז"
-        style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
+        placeholder="e.g. Trip to Paris"
+        style={{
+          width: '100%',
+          padding: '10px',
+          marginBottom: '15px',
+          borderRadius: '8px',
+          border: '1px solid #555',
+          backgroundColor: '#222',
+          color: 'white'
+        }}
       />
 
-      <label>סכום יעד (₪):</label>
+      <label>Target Amount (₪):</label>
       <input
         type="number"
         value={goalAmount}
         onChange={(e) => setGoalAmount(e.target.value)}
         placeholder="₪"
-        style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
+        style={{
+          width: '100%',
+          padding: '10px',
+          marginBottom: '20px',
+          borderRadius: '8px',
+          border: '1px solid #555',
+          backgroundColor: '#222',
+          color: 'white'
+        }}
       />
 
-      <button onClick={handleAddGoal} style={{ padding: '10px 20px', backgroundColor: '#1976d2', color: '#fff', border: 'none', borderRadius: '8px' }}>
-        הוסף מטרה
+      <button
+        onClick={handleAddGoal}
+        style={{
+          width: '100%',
+          padding: '12px',
+          backgroundColor: '#e3bd67',
+          color: '#000',
+          fontWeight: 'bold',
+          border: 'none',
+          borderRadius: '8px',
+          cursor: 'pointer',
+          transition: '0.3s'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.backgroundColor = '#c9a74f';
+          e.target.style.color = 'white';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.backgroundColor = '#e3bd67';
+          e.target.style.color = '#000';
+        }}
+      >
+        ➕ Add Goal
       </button>
 
-      <ul style={{ marginTop: '20px' }}>
-        {goals.map((goal, index) => (
-          <li key={index}>
-            🎯 {goal.name} – ₪{goal.amount}
-          </li>
-        ))}
-      </ul>
+      {goals.length > 0 && (
+        <ul style={{ marginTop: '25px', color: '#eee', listStyleType: 'none', paddingLeft: 0 }}>
+          {goals.map((goal, index) => (
+            <li key={index} style={{ marginBottom: '10px' }}>
+              🎯 <strong>{goal.name}</strong> – <span style={{ color: '#e3bd67' }}>₪{goal.amount.toFixed(2)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

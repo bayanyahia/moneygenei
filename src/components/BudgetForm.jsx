@@ -7,9 +7,9 @@ export default function BudgetForm() {
 
   return (
     <div style={{ padding: '20px', maxWidth: '400px', margin: 'auto', backgroundColor: '#f5f5f5', borderRadius: '12px' }}>
-      <h2 style={{ textAlign: 'center' }}>מחשבון תקציב</h2>
+      <h2 style={{ textAlign: 'center' }}>Monthly Budget Calculator</h2>
 
-      <label>הכנסה חודשית:</label>
+      <label>Monthly Income:</label>
       <input
         type="number"
         value={income}
@@ -18,7 +18,7 @@ export default function BudgetForm() {
         style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
       />
 
-      <label>סך כל ההוצאות:</label>
+      <label>Total Expenses:</label>
       <input
         type="number"
         value={expenses}
@@ -27,7 +27,7 @@ export default function BudgetForm() {
         style={{ width: '100%', padding: '8px', marginBottom: '10px' }}
       />
 
-      <h3>יתרה חודשית: ₪{remaining || 0}</h3>
+      <h3>Remaining Balance: ₪{remaining || 0}</h3>
     </div>
   );
 }
