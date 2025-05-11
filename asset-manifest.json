@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/moneygenei/static/css/main.f855e6bc.css",
+    "main.js": "/moneygenei/static/js/main.485eaafb.js",
+    "static/js/453.16e7b157.chunk.js": "/moneygenei/static/js/453.16e7b157.chunk.js",
+    "static/media/background.mp4": "/moneygenei/static/media/background.2934ca4a4cede99ef7dc.mp4",
+    "static/media/user.png": "/moneygenei/static/media/user.f890e459d3cc09ea7e1c.png",
+    "index.html": "/moneygenei/index.html",
+    "main.f855e6bc.css.map": "/moneygenei/static/css/main.f855e6bc.css.map",
+    "main.485eaafb.js.map": "/moneygenei/static/js/main.485eaafb.js.map",
+    "453.16e7b157.chunk.js.map": "/moneygenei/static/js/453.16e7b157.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.485eaafb.js"
+  ]
+}
