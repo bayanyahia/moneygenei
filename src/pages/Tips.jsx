@@ -52,8 +52,6 @@ export default function Tips() {
           }}>
             💡 Money Saving Tips
           </h2>
-
-          {/* Tips list component */}
           <TipsList />
         </div>
       </div>
