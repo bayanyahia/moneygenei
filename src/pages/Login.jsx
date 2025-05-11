@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LoginIcon from '../assets/Login_icon.png';
+import LoginIcon from '../assets/user.png';
 import BackgroundVideo from '../assets/background.mp4'; // ← וידאו רקע במקום תמונה
 
 export default function Login() {
